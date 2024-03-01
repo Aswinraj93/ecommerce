@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .nav {
+            background-color: #ABB2B9;
+            padding: 1%;
+            font-size: 25px;
+            box-shadow: 4px 3px 10px slategrey;
+
+        }
+
+        .title {
+            font-weight: 900;
+            font-family: 'Courier New', Courier, monospace;
+            border-radius: 12px;
+            text-shadow: 10px 1px 7px rgb(65, 74, 83);
+        }
+
+        body {
+            background-color: #E4E4E1;
+            background-image: radial-gradient(at top center, rgba(255, 255, 255, 0.03) 0%, rgba(0, 0, 0, 0.03) 100%), linear-gradient(to top, rgba(255, 255, 255, 0.1) 0%, rgba(143, 152, 157, 0.60) 100%);
+            background-blend-mode: normal, multiply;
+            overflow-x: hidden;
+
+        }
+
+        .ROW1 {
+            display: flex;
+            justify-items: center;
+            margin-top: 5%;
+            overflow: hidden;
+        }
+
+        .CARD1 {
+            margin-left: 40px;
+            margin-right: 50px;
+            background-color: snow;
+            padding-top: 5px;
+            padding-bottom: 1px;
+            padding-left: 5px;
+            padding-right: 5px;
+            border-radius: 15px;
+            font-size: 18px;
+            color: #5D6D7E;
+        }
+
+        .button {
+            border: none;
+            border-radius: 14px;
+            color: #ABB2B9;
+            background-color: #273746;
+            margin-left: 50%;
+            font-weight: bold;
+            padding: 12px 20px 12px 20px;
+        }
+
+        .button:hover {
+            background-color: #21262c;
+            color: rgb(41, 172, 47);
+            transform: scale(1.1);
+            transition: 0.4s;
+        }
+
+        .CARD1 img:hover {
+            transform: translateX(-6px);
+            transition: 0.5s;
+            border-radius: 20px;
+            box-shadow: 3px 5px 10px;
+        }
+
+        .money {
+            font-size: 30px;
+            font-weight: bold;
+            color: #273746;
+        }
+
+        .About {
+            color: #003153;
+            margin-left: 45%;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+        }
+
+        .About:hover {
+            color: #000080;
+            text-shadow: 3px 3px 10px slategrey;
+            transform: scale(0.9);
+            transition: 0.6s;
+        }
+
+        .content {
+            color: #003153;
+            margin-left: 4%;
+            font-size: 22px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+        }
+
+        .content:hover {
+            color: #000080;
+            text-shadow: 3px 3px 10px slategrey;
+            transform: scale(0.9);
+            transition: 0.3s;
+        }
+
+        .Help {
+            color: #003153;
+            margin-left: 4%;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+        }
+
+        .Help:hover {
+            color: #000080;
+            text-shadow: 3px 3px 10px slategrey;
+            transform: scale(0.9);
+            transition: 0.6s;
+        }
+
+        .sign-btn {
+            color: whitesmoke;
+            margin-left: 11%;
+            background-color: #003153;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            padding-top: 8px;
+            padding-left: 1.5%;
+            padding-bottom: 10px;
+            box-shadow: 5px 4px 10px #5D6D7E;
+            padding-right: 1.5%;
+            border-radius: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+        }
+
+        .sign-btn:hover {
+            background-color: royalblue;
+            color: #21262c;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+
+        .to{
+             text-align: center;
+             background-color: aliceblue;
+             margin-left: 37%;
+             margin-right: 37%;
+             margin-top: 5%;
+             padding:1%;
+             border-radius: 10px;
+        }
+        #total{
+            font-size: 22px;
+            font-weight: bold;
+        }
+        .remove{
+            margin-left: 46%;
+            margin-top: 1%;
+            color: whitesmoke;
+            background-color: #003153;
+            font-size: 15px;
+            font-weight: bold;
+            border: none;
+            padding-top: 8px;
+            padding-left: 1.5%;
+            padding-bottom: 10px;
+            box-shadow: 5px 4px 10px #5D6D7E;
+            padding-right: 1.5%;
+            border-radius: 16px;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
+                'Helvetica Neue', sans-serif;
+
+        }
+        .remove:hover{
+            background-color: royalblue;
+            color: #21262c;
+            transform: scale(1.1);
+            transition: 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="nav" style="display: flex;">
+        <div class="title">ECOMMERCE</div>
+        <div class="About">About</div>
+        <div class="content">Content</div>
+        <div class="Help">Help</div>
+        <button class="sign-btn" type="submit">Sign in</button>
+    </nav>
+    <div class="ROW1">
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-1.png" style="height: 70%; width: 100%; border-radius: 20px;">
+            <p>ARAMISH Mens Brown Genuine Formal Leather Brogue Shoe</p>
+            <div style="display:flex;">
+                <div class="money">$20.77</div>
+                <button class="button" onclick="addToCart('ARAMISH Men,s Brown ',20.77)">ADD+</button>
+            </div>
+        </div>
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-2.png" style="height: 70%; width: 100%;">
+            <p>NIKE Running shoe The Zoom Structure 20, Built For Stability</p>
+            <div style="display:flex;">
+                <div class="money">$39.90</div>
+                <button class="button" onclick="addToCart('Zoom Structure 20',39.90)">ADD+</button>
+            </div>
+        </div>
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-3.png" style="height: 70%; width: 100%;">
+            <p>Sneakers rubber sport fashion ,Sneakers Running shoe transparent</p>
+            <div style="display:flex;">
+                <div class="money">$69.06</div>
+                <button class="button" onclick="addToCart('Sneakers rubber',69.06)">ADD+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="ROW1">
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-4.png" style="height: 70%; width: 100%; border-radius: 20px;">
+            <p>Adidas Men's Lite Racer Adapt 5.0 Running shoe Sneakers</p>
+            <div style="display:flex;">
+                <div class="money">$63.78</div>
+                <button class="button" onclick="addToCart('Racer Adapt 5.0',63.78)">ADD+</button>
+            </div>
+        </div>
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-5.png" style="height: 70%; width: 100%;">
+            <p>Rockport Men,s Austyn Plain toe Oxford, Coffee 760*768</p>
+            <div style="display:flex;">
+                <div class="money">$22.15</div>
+                <button class="button" onclick="addToCart('Rockport Men,s',22.15)">ADD+</button>
+            </div>
+        </div>
+        <div class="CARD1">
+            <img src="/Besant tech/image/photo-6.png" style="height: 70%; width: 100%;">
+            <p>REEBOK Sublite Prime Running Shoes in (white,Blue,Grey)</p>
+            <div style="display:flex;">
+                <div class="money">$36.12</div>
+                <button class="button" onclick="addToCart('REEBOK Running Shoes',36.12)">ADD+</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="to">
+        <h1>Shopping Cart</h1>
+        <hr>
+        <ul id="cart-items" style="list-style: none;"></ul>
+        <hr>
+        <p id="total">Total: Rs 0.00</p>
+    </div>
+
+    <button class="remove" type="submit" onclick="remove()" >remove</button>
+
+    <script>
+        let cart = [];
+        const cartItems = document.getElementById('cart-items');
+        const totalElement = document.getElementById('total');
+
+        function addToCart(productName, price) {
+            cart.push({ productName, price });
+            updateCart();
+        }
+
+        function remove(productName, price) {
+            cart.pop({ productName, price });
+            updateCart();
+        }
+
+        function updateCart() {
+            cartItems.innerHTML = '';
+            let totalPrice = 0;
+
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.productName} - ${item.price}`;
+                listItem.style.fontSize="18px"
+                listItem.style.fontWeight="bold"
+                cartItems.appendChild(listItem);
+                totalPrice += item.price;
+            });
+            totalElement.textContent = `Total: ${totalPrice.toFixed(2)}`;
+        }
+    </script>
+
+</body>
+
+</html>
